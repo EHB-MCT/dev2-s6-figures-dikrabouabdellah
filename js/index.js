@@ -2,7 +2,7 @@
 import Figure from "./Figure.js";
 import Circle from "./Circle.js";
 import Rectangle from "./Rectangle.js";
-//import Square from './Square.js';
+import Square from "./Square.js";
 
 const form = {
 	changeSelect(e) {},
@@ -12,9 +12,16 @@ const form = {
 		console.log(rectangle);
 		const circle = new Circle("circle", 20);
 		console.log(circle);
+		const square = new Square("square", 50);
+		console.log(square);
+		document.querySelector("#form").addEventListener("submit", this.submitForm);
 	},
 	inputElementsWithLabel(label, id) {},
-	submitForm(e) {},
+	submitForm(e) {
+		e.preventDefault();
+		console.log("form submitted");
+		innerHtml();
+	},
 };
 
 form.init();

@@ -11,23 +11,26 @@ export default class Circle extends figure {
 	get surfaceArea() {
 		return Math.PI * this.radius * this.radius;
 	}
-	get htmlString() {
+	get circumference() {
+		return 2 * Math.PI * this.radius;
+	}
+	get innerHTML() {
 		return `<div class="result">
         <div class="figure circle" style="width: DIAMETERpx; height: DIAMETERpx;"></div>
         <div class="infoBox">
           <h3>Circle</h3>
           <dl>
             <dt>Radius</dt>
-            <dd>RADIUS px</dd>
+            <dd>${this.radius} px</dd>
       
             <dt>Diameter</dt>
-            <dd>DIAMETER px</dd>
+            <dd>${this.diameter} px</dd>
       
             <dt>Area</dt>
-            <dd>AREA px</dd>
+            <dd>${this.surfaceArea} px</dd>
       
             <dt>Circumference</dt>
-            <dd>CIRCUMFERENCE px</dd>
+            <dd>${this.circumference} px</dd>
           </dl>
         </div>
       </div>`;

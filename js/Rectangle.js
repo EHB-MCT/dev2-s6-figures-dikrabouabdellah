@@ -12,23 +12,23 @@ export default class Rectangle extends figure {
 	get circumference() {
 		return (this.width + this.height) * 2;
 	}
-	get htmlString() {
+	get innerHTML() {
 		return `<div class="result">
 			<div class="figure rectangle" style="width: WIDTHpx; height: HEIGHTpx;"></div>
 			<div class="infoBox">
 				<h3>${this.name}</h3>
 				<dl>
 					<dt>Height</dt>
-					<dd>HEIGHT px</dd>
+					<dd>${this.height} px</dd>
 
 					<dt>Width</dt>
-					<dd>WIDTH px</dd>
+					<dd>${this.width} px</dd>
 
 					<dt>Area</dt>
-					<dd>AREA px</dd>
+					<dd>${this.surfaceArea} px</dd>
 
 					<dt>Circumference</dt>
-					<dd>CIRCUMFERENCE px</dd>
+					<dd>${this.circumference} px</dd>
 				</dl>
 			</div>
 		</div>`;
